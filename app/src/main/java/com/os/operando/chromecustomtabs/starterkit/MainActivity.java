@@ -12,7 +12,7 @@ import org.chromium.customtabsclient.shared.CustomTabsHelper;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final Uri URI = Uri.parse("https://www.android.com/");
+    private static final Uri URI = Uri.parse("https://operando.github.io/push-api-sample/");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

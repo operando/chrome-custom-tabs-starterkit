@@ -1,5 +1,5 @@
-# Chrome custom tabs Starter Kit
+# Chrome Custom Tabs Starter Kit
 
-## Chrome custom tabs examples
+## Chrome Custom Tabs examples
 
 https://github.com/GoogleChrome/custom-tabs-client
