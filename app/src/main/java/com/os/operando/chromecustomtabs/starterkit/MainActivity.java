@@ -4,13 +4,15 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.customtabs.CustomTabsIntent;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.View;
+import android.widget.EditText;
 
 import org.chromium.customtabsclient.shared.CustomTabsHelper;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final Uri URI = Uri.parse("https://developer.chrome.com/multidevice/android/customtabs");
+    private static final Uri URI = Uri.parse("https://www.android.com/");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +24,11 @@ public class MainActivity extends AppCompatActivity {
         CustomTabsIntent tabsIntent = new CustomTabsIntent.Builder().build();
         String packageName = CustomTabsHelper.getPackageNameToUse(this);
         tabsIntent.intent.setPackage(packageName);
-        tabsIntent.launchUrl(this, URI);
+        tabsIntent.launchUrl(this, getUri());
+    }
+
+    private Uri getUri() {
+        String url = ((EditText) findViewById(R.id.url)).getText().toString();
+        return TextUtils.isEmpty(url) ? URI : Uri.parse(url);
     }
 }
