@@ -21,6 +21,6 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile project(':customtabs')
+    compile 'com.android.support:customtabs:23.1.1'
     compile project(':shared')
 }
